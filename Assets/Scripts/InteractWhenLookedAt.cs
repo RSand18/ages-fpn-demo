@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Detects when the player presses the interact button while looking at an interactive,
+/// and then calls that IInteractive's InteractWith method.
+/// </summary>
 public class InteractWhenLookedAt : MonoBehaviour
 {
-    private IInteractive lookedAtInteractive;
+    [SerializeField]
+    private DetectLookedAtInteractive detectLookedAtInteractive;
+
+    //Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("interact") && lookedAtInteractive != null)
+        if (Input.GetButtonDown("interact") && detectLookedAtInteractive.LookedAtInteractive != null)
         {
             Debug.Log("Player pressed the interact button.");
-            lookedAtInteractive.InteractWith();
+            detectLookedAtInteractive.LookedAtInteractive.InteractWith();
         }
     }
 
@@ -26,7 +33,7 @@ public class InteractWhenLookedAt : MonoBehaviour
     #region Event subscription / unsubscription
     private void OnEnable()
     {
-        DetectLookedAtInteractive.LookedAtInteractiveChanged += OnLookedAtinteractiveChanged;
+        detectLookedAtInteractive.LookedAtInteractive += OnLookedAtinteractiveChanged;
     }
     private void OnDisable()
     {

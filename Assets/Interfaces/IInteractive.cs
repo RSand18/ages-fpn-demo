@@ -4,6 +4,6 @@
 /// </summary>
 public interface IInteractive
 {
-    string DisplayText {get; }
+    string DisplayText { get; }
     void InteractWith();
 }

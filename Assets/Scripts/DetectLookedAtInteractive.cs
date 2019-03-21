@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,29 @@ public class DetectLookedAtInteractive : MonoBehaviour
     [SerializeField]
     private float maxRange = 3.0f;
 
-    public IInteractive lookedAtInteractive;
+    /// <summary>
+    /// Event raised when the player looks at a different interactive.
+    /// </summary>
+    public static event Action<IInteractive> LookedAtInteractiveChanged;
+
+    public IInteractive LookedAtInteractive
+    {
+        get
+        {
+            return lookedAtInteractive;
+        }
+        private set
+        {
+            bool isInteractiveChanged = value != lookedAtInteractive;
+            if(isInteractiveChanged)
+            {
+                lookedAtInteractive = value;
+                LookedAtInteractiveChanged.Invoke(lookedAtInteractive);         
+            }         
+        }
+    }
+
+    private IInteractive lookedAtInteractive;
 
     private void FixedUpdate()
     {
@@ -27,19 +50,17 @@ public class DetectLookedAtInteractive : MonoBehaviour
 
         IInteractive interactive = null;
 
+        LookedAtInteractive = interactive;
+
         if (objectWasDetected)
         {
-            Debug.Log($"Player is looking at: (hitInfo.collider.gameObject.name)");
+            Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
             interactive = hitInfo.collider.gameObject.GetComponent<IInteractive>();
         }
 
         if (interactive != null)
         {
             lookedAtInteractive = interactive;
-        }
-            
-           
-        
-        
+        }   
     }
 }
