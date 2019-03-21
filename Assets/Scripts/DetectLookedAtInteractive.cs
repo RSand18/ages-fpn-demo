@@ -17,15 +17,29 @@ public class DetectLookedAtInteractive : MonoBehaviour
     [SerializeField]
     private float maxRange = 3.0f;
 
+    public IInteractive lookedAtInteractive;
+
     private void FixedUpdate()
     {
         Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * maxRange, Color.red);
         RaycastHit hitInfo;
         bool objectWasDetected = Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hitInfo, maxRange);
 
+        IInteractive interactive = null;
+
         if (objectWasDetected)
         {
             Debug.Log($"Player is looking at: (hitInfo.collider.gameObject.name)");
+            interactive = hitInfo.collider.gameObject.GetComponent<IInteractive>();
         }
+
+        if (interactive != null)
+        {
+            lookedAtInteractive = interactive;
+        }
+            
+           
+        
+        
     }
 }
