@@ -23,6 +23,7 @@ public class Cable_Procedural_Simple : MonoBehaviour {
 	[SerializeField] float swayMultiplier = 1;
 	[SerializeField] float swayXMultiplier = 1;
 	[SerializeField] float swayYMultiplier = .5f;
+
 	//How fast the cable will go back and forth per second.
 	[SerializeField] float swayFrequency = 1;
 
@@ -44,8 +45,6 @@ public class Cable_Procedural_Simple : MonoBehaviour {
 		//Start animation at random times
 		swayValue = Random.Range(0, 3.14f);
 	}
-	
-
 
 	void Update () 
 	{
@@ -86,10 +85,14 @@ public class Cable_Procedural_Simple : MonoBehaviour {
 
 			//Calculate the position of the current point i
 			Vector3 pointPosition = vectorFromStartToEnd * pointForCalcs;
+
 			//Calculate the sag vector for the current point i
 			Vector3 sagAtPoint = sagDirection * sagAmplitude;
+
 			//Calculate the sway vector for the current point i
 			Vector3 swayAtPoint = swayMultiplier * transform.TransformDirection( new Vector3(Mathf.Sin(swayValue) * swayXMultiplier, Mathf.Cos(2 * swayValue + Mathf.PI) * .5f * swayYMultiplier, 0));
+
+
 			//Calculate the waving due to wind for the current point i 
 
 			//Calculate the postion with Sag.
@@ -99,7 +102,6 @@ public class Cable_Procedural_Simple : MonoBehaviour {
 				(swayAtPoint + 
 					Vector3.ClampMagnitude(sagAtPoint, sagAmplitude)) * effectAtPointMultiplier;
 		
-
 			//Set point
 			line.SetPosition(i, currentPointsPosition);
 			i++;
