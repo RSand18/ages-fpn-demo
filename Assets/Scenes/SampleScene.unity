@@ -1090,7 +1090,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-77032
+  m_Name: pb_Mesh13738
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4847,9 +4847,9 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 58.27, y: 18.15, z: 41.69}
-  - {x: 54.70189, y: 14.909174, z: 35.77174}
-  - {x: 51.405056, y: 12.075953, z: 29.719196}
-  - {x: 48.491886, y: 9.819174, z: 23.47674}
+  - {x: 55.065052, y: 14.745165, z: 35.65621}
+  - {x: 51.918648, y: 11.844009, z: 29.55581}
+  - {x: 48.85505, y: 9.655165, z: 23.36121}
   - {x: 45.85, y: 7.9699993, z: 17.1}
   m_Parameters:
     serializedVersion: 3
@@ -7855,7 +7855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243673112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48, y: 8, z: 42}
+  m_LocalPosition: {x: 47.75, y: 8, z: 42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1399908217}
@@ -9110,7 +9110,6 @@ GameObject:
   - component: {fileID: 1399908213}
   - component: {fileID: 1399908218}
   - component: {fileID: 1399908220}
-  - component: {fileID: 1399908219}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -9458,19 +9457,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1399908219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399908212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c050f880d59f1a640b08c540f13d4d79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayText: Press 'E' to Open
 --- !u!82 &1399908220
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11700,6 +11686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RigidBodyFPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40
@@ -11744,10 +11734,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: advancedSettings.slowDownRate
       value: 20
@@ -11760,7 +11746,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72308
+  m_Name: pb_Mesh13868
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -13686,7 +13672,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-71218
+  m_Name: pb_Mesh13824
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
