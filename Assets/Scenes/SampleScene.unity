@@ -3362,7 +3362,7 @@ GameObject:
   - component: {fileID: 437037030}
   - component: {fileID: 437037029}
   m_Layer: 0
-  m_Name: Inventory Object
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5266,9 +5266,9 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 58.27, y: 18.15, z: 41.69}
-  - {x: 54.523094, y: 15.048758, z: 35.80426}
-  - {x: 51.152203, y: 12.273355, z: 29.765186}
-  - {x: 48.31309, y: 9.958757, z: 23.50926}
+  - {x: 54.586243, y: 14.995477, z: 35.794422}
+  - {x: 51.24151, y: 12.198004, z: 29.751272}
+  - {x: 48.37624, y: 9.905477, z: 23.499422}
   - {x: 45.85, y: 7.9699993, z: 17.1}
   m_Parameters:
     serializedVersion: 3
