@@ -48,7 +48,6 @@ public class LookedAtInteractiveDisplayText : MonoBehaviour
     private void OnDisable()
     {
         DetectLookedAtInteractive.LookedAtInteractiveChanged -= OnLookedAtInteractiveChanged;
-
     }
     #endregion
 }

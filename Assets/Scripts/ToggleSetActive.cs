@@ -28,7 +28,6 @@ public class ToggleSetActive : InteractiveObject
             {
                 displayText = string.Empty;
             }
-        }
-        
+        }  
     }
 }
