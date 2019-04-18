@@ -44,6 +44,15 @@ public class DetectLookedAtInteractive : MonoBehaviour
 
     private void FixedUpdate()
     {
+        LookedAtInteractive = GetLookedAtInteractive();
+    }
+
+    /// <summary>
+    /// Raycasts forward from the camera to look for IInteractives.
+    /// </summary>
+    /// <returns>The first IInteractive detected, or null if none are found.</returns>
+    private IInteractive GetLookedAtInteractive()
+    {
         Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * maxRange, Color.red);
         RaycastHit hitInfo;
         bool objectWasDetected = Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hitInfo, maxRange);
@@ -61,6 +70,6 @@ public class DetectLookedAtInteractive : MonoBehaviour
         if (interactive != null)
         {
             lookedAtInteractive = interactive;
-        }   
+        }
     }
 }
