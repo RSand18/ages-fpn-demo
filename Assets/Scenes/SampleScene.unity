@@ -1090,7 +1090,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13738
+  m_Name: pb_Mesh13556
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4847,9 +4847,9 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 58.27, y: 18.15, z: 41.69}
-  - {x: 55.065052, y: 14.745165, z: 35.65621}
-  - {x: 51.918648, y: 11.844009, z: 29.55581}
-  - {x: 48.85505, y: 9.655165, z: 23.36121}
+  - {x: 54.76442, y: 14.8689, z: 35.75683}
+  - {x: 51.49349, y: 12.018998, z: 29.698109}
+  - {x: 48.554417, y: 9.7789, z: 23.46183}
   - {x: 45.85, y: 7.9699993, z: 17.1}
   m_Parameters:
     serializedVersion: 3
@@ -9110,6 +9110,7 @@ GameObject:
   - component: {fileID: 1399908213}
   - component: {fileID: 1399908218}
   - component: {fileID: 1399908220}
+  - component: {fileID: 1399908219}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -9367,17 +9368,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 00000000
-  m_SelectedEdges:
-  - a: 0
-    b: 1
-  - a: 2
-    b: 0
-  - a: 1
-    b: 3
-  - a: 3
-    b: 2
-  m_SelectedVertices: 00000000010000000200000003000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1399908215
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9457,6 +9450,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1399908219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399908212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccabdb61144298b4b9b702e1118ebb72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Press E to Open
+  isLocked: 1
+  lockedDisplayText: Locked
+  lockedAudioClip: {fileID: 0}
+  openAudioClip: {fileID: 0}
 --- !u!82 &1399908220
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11746,7 +11756,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh13868
+  m_Name: pb_Mesh13686
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
