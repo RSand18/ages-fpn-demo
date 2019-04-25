@@ -10,6 +10,10 @@ public class Door : InteractiveObject
     [SerializeField]
     private InventoryObject key;
 
+    [Tooltip("If this is checked, the associated key will be removed from the plaayer's inventory when the door is unlocked.")]
+    [SerializeField]
+    private bool consumesKey;
+
     [Tooltip("The text that displays when the player looks at the door while it's locked.")]
     [SerializeField]
     private string lockedDisplayText = "Locked";
@@ -32,7 +36,7 @@ public class Door : InteractiveObject
             string toReturn;
             if (isLocked)
             {
-                toReturn = HasKey ? $"Use {key.obj lockedDisplayText;
+                toReturn = HasKey ? $"Use {key.ObjectName}" : lockedDisplayText;
             }
             else
             {
@@ -84,8 +88,18 @@ public class Door : InteractiveObject
                 animator.SetBool(shouldOpenAnimParameter, true);
                 displayText = string.Empty;
                 isOpen = true;
+                UnlockDoor();
             }
             base.InteractWith(); // This plays a sound effect!
+        }
+    }
+
+    private void UnlockDoor()
+    {
+        isLocked = false;
+        if (key != null && consumesKey)
+        {
+            PlayerInventory.InventoryObjects.Remove(key);
         }
     }
 }

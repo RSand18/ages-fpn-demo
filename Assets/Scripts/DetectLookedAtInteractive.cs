@@ -5,7 +5,6 @@ using UnityEngine;
 
 /// <summary>
 /// Detects interactive elements the player is looking at.
-/// 
 /// https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
 /// </summary>
 public class DetectLookedAtInteractive : MonoBehaviour
@@ -61,15 +60,11 @@ public class DetectLookedAtInteractive : MonoBehaviour
 
         LookedAtInteractive = interactive;
 
-        if (objectWasDetected)
+        if (objectWasDetected && hitInfo.collider.gameObject.name != "FPSPLAYER")
         {
-            Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
+            //Debug.Log($"Player is looking at: {hitInfo.collider.gameObject.name}");
             interactive = hitInfo.collider.gameObject.GetComponent<IInteractive>();
         }
-
-        if (interactive != null)
-        {
-            lookedAtInteractive = interactive;
-        }
+        return interactive;
     }
 }
