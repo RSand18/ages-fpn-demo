@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,11 +12,11 @@ using UnityEngine.UI;
 public class LookedAtInteractiveDisplayText : MonoBehaviour
 {
     private IInteractive lookedAtInteractive;
-    private Text displayText;
+    private TextMeshProUGUI displayText;
 
     private void Awake()
     {
-        displayText = GetComponent<Text>();
+        displayText = GetComponent<TextMeshProUGUI>();
         UpdateDisplayText();
     }
 

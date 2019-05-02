@@ -34,7 +34,7 @@ public class DetectLookedAtInteractive : MonoBehaviour
             if(isInteractiveChanged)
             {
                 lookedAtInteractive = value;
-                LookedAtInteractiveChanged.Invoke(lookedAtInteractive);         
+                LookedAtInteractiveChanged?.Invoke(lookedAtInteractive);         
             }         
         }
     }
