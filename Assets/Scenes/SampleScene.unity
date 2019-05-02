@@ -1090,7 +1090,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24652
+  m_Name: pb_Mesh-1328
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4847,9 +4847,9 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 58.27, y: 18.15, z: 41.69}
-  - {x: 54.93846, y: 14.782367, z: 35.70475}
-  - {x: 51.73962, y: 11.896621, z: 29.624454}
-  - {x: 48.72846, y: 9.692367, z: 23.409748}
+  - {x: 55.528694, y: 14.836039, z: 35.38441}
+  - {x: 52.57434, y: 11.972525, z: 29.171429}
+  - {x: 49.31869, y: 9.746038, z: 23.08941}
   - {x: 45.85, y: 7.9699993, z: 17.1}
   m_Parameters:
     serializedVersion: 3
@@ -5164,7 +5164,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24574
+  m_Name: pb_Mesh-1286
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -9287,6 +9287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43
@@ -10604,7 +10608,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24784
+  m_Name: pb_Mesh-1324
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -12530,7 +12534,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24740
+  m_Name: pb_Mesh-1302
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
