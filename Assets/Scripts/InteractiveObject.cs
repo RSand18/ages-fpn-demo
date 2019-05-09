@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour, IInteractive
 {
+    [Tooltip("Text that will display in the UI when the player loks at this object in the world.")]
     [SerializeField]
     protected string displayText = nameof(InteractiveObject);
 
-    public string DisplayText => displayText;
-    private AudioSource audioSource;
+    public virtual string DisplayText => displayText;
+    protected AudioSource audioSource;
 
     protected virtual void Awake()
     {
@@ -23,9 +24,9 @@ public class InteractiveObject : MonoBehaviour, IInteractive
         {
             audioSource.Play();
         }
-        catch (System.Exception)
+        catch (System.Exception e)
         {
-            throw new System.Exception("Missing audioSource component: InteractiveObject requires an AudioSource component.");
+            throw e;
         }
         Debug.Log($"Player just interacted with" + (gameObject.name) + ".");
     }
