@@ -10,7 +10,7 @@ public class Door : InteractiveObject
     [SerializeField]
     private InventoryObject key;
 
-    [Tooltip("If this is checked, the associated key will be removed from the plaayer's inventory when the door is unlocked.")]
+    [Tooltip("If this is checked, the associated key will be removed from the player's inventory when the door is unlocked.")]
     [SerializeField]
     private bool consumesKey;
 
@@ -25,9 +25,6 @@ public class Door : InteractiveObject
     [Tooltip("Play this audio clip when the player opens the door.")]
     [SerializeField]
     private AudioClip openAudioClip;
-
-    // public override string DisplayText => isLocked ? lockedDisplayText : base.displayText;
-
 
     public override string DisplayText
     {
@@ -78,14 +75,14 @@ public class Door : InteractiveObject
     {
         if (!isOpen)
         {
-            if (!isLocked && HasKey)
+            if (isLocked && !HasKey)
             {
                 audioSource.clip = lockedAudioClip;
             }
             else // if it's not locked at least we have the key...
             {
                 audioSource.clip = openAudioClip;
-                animator.SetBool(shouldOpenAnimParameter, true);
+                animator.SetBool("shouldOpen", true);
                 displayText = string.Empty;
                 isOpen = true;
                 UnlockDoor();
