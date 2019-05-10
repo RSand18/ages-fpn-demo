@@ -14,7 +14,7 @@ public class TitleMenu : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadScene("InventoryMenuTest");
     }
 
     public void ShowCredits()
