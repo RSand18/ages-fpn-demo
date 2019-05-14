@@ -19,7 +19,7 @@ public class TitleMenu : MonoBehaviour
 
     public void ShowCredits()
     {
-        creditsMenuPanel.SetActive(true);
+        Application.OpenURL("https://github.com/RSand18/ages-fpn-demo/tree/master");
     }
 
     public void ShowTitle ()
